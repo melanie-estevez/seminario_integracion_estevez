@@ -1,0 +1,144 @@
+# ==============================
+# 🔐 VARIABLES DE ENTORNO
+# ==============================
+.env
+*.env
+.env.*
+*.env.local
+
+# ==============================
+# 🗃️ BASE DE DATOS
+# ==============================
+db.sqlite3
+db.sqlite3-journal
+
+# ==============================
+# 🧠 PYTHON
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ==============================
+# 📦 ENTORNOS VIRTUALES
+# ==============================
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# ==============================
+# 🧪 TESTING / COVERAGE
+# ==============================
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# ==============================
+# 📁 MIGRATIONS (opcional)
+# ==============================
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# ==============================
+# 📦 BUILD / DISTRIBUCIÓN
+# ==============================
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==============================
+# 📁 ARCHIVOS ESTÁTICOS
+# ==============================
+staticfiles/
+static_root/
+
+# ==============================
+# 📁 MEDIA (uploads)
+# ==============================
+media/
+media_root/
+
+# ==============================
+# 🗃️ LOGS
+# ==============================
+*.log
+
+# ==============================
+# 🧾 ARCHIVOS DEL SISTEMA
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# 🧰 IDEs / EDITORES
+# ==============================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ==============================
+# 🐳 DOCKER
+# ==============================
+*.pid
+*.seed
+*.pid.lock
+docker-compose.override.yml
+
+# ==============================
+# ☁️ ARCHIVOS LOCALES
+# ==============================
+local_settings.py
+settings_local.py
+
+# ==============================
+# 🔑 ARCHIVOS SECRETOS
+# ==============================
+*.pem
+*.key
+
+# ==============================
+# 📓 JUPYTER
+# ==============================
+.ipynb_checkpoints
+
+# ==============================
+# 🧾 CACHE DJANGO
+# ==============================
+*.cache
+
+# ==============================
+# 🔄 BACKUPS
+# ==============================
+*.bak
+*.swp
+*.tmp
+
+# ==============================
+# 📁 ARCHIVOS TEMPORALES
+# ==============================
+tmp/
+temp/
