@@ -6,6 +6,7 @@ import ProtectedRoute from './ProtectedRoute'
 import AppShell from '@/presentation/components/AppShell'
 import PlaceholderPage from '../pages/PlaceholderPage'
 
+
 // ─── Lazy imports ─────────────────────────────────────────────────────────────
 
 // Auth (sin shell) — reales desde este módulo
@@ -18,7 +19,8 @@ const CheckoutPage = lazy(() => import('../pages/orders/CheckoutPage'))
 const OrdersPage = lazy(() => import('../pages/orders/OrdersPage'))
 const OrderDetailPage = lazy(() => import('../pages/orders/OrderDetailPage'))
 const ProfilePage = lazy(() => import('../pages/profile/ProfilePage'))
-
+const AdminCategoriesPage = lazy(() => import('../pages/admin/AdminCategoriesPage'))
+const AdminDashboardPage = lazy(() => import('../pages/admin/AdminDashboardPage'))
 // El resto de páginas todavía no existen: se implementan en módulos posteriores
 // (Catálogo → 4/5, Carrito → 6, Órdenes → 7, Perfil → 8, Admin → 9-13) y cada uno
 // reemplaza aquí su propio <Route> por un lazy import real.
@@ -108,7 +110,7 @@ export default function AppRouter() {
               path="/admin"
               element={
                 <ProtectedRoute requireStaff>
-                  <PlaceholderPage title="Admin Dashboard — Módulo 9" />
+                  <AdminDashboardPage />
                 </ProtectedRoute>
               }
             />
@@ -116,7 +118,7 @@ export default function AppRouter() {
               path="/admin/categories"
               element={
                 <ProtectedRoute requireStaff>
-                  <PlaceholderPage title="Admin Categorías — Módulo 10" />
+                  <AdminCategoriesPage />
                 </ProtectedRoute>
               }
             />
