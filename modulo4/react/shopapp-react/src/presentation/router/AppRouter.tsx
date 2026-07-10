@@ -5,6 +5,7 @@ import { useAuthStore } from '@/presentation/store/auth.store'
 import ProtectedRoute from './ProtectedRoute'
 import AppShell from '@/presentation/components/AppShell'
 import PlaceholderPage from '../pages/PlaceholderPage'
+import CartPage from '../pages/cart/CartPage'
 
 // ─── Lazy imports ─────────────────────────────────────────────────────────────
 
@@ -60,7 +61,7 @@ export default function AppRouter() {
               path="/cart"
               element={
                 <ProtectedRoute>
-                  <PlaceholderPage title="Carrito — Módulo 6" />
+                  <CartPage />
                 </ProtectedRoute>
               }
             />
