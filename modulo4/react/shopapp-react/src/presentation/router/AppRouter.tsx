@@ -18,7 +18,7 @@ import OrderDetailPage from '../pages/orders/OrderDetailPage'
 // Auth (sin shell) — reales desde este módulo
 const LoginPage = lazy(() => import('../pages/auth/LoginPage'))
 const RegisterPage = lazy(() => import('../pages/auth/RegisterPage'))
-
+const ProfilePage = lazy(() => import('../pages/profile/ProfilePage'))
 // El resto de páginas todavía no existen: se implementan en módulos posteriores
 // (Catálogo → 4/5, Carrito → 6, Órdenes → 7, Perfil → 8, Admin → 9-13) y cada uno
 // reemplaza aquí su propio <Route> por un lazy import real.
@@ -37,7 +37,7 @@ function PageLoader() {
 
 export default function AppRouter() {
   const loadSession = useAuthStore((state) => state.loadSession)
-
+  
   // Cargar la sesión guardada al iniciar la app.
   // loadSession() restaura los tokens y valida el token con /auth/me/
   useEffect(() => {
@@ -92,11 +92,11 @@ export default function AppRouter() {
                     </ProtectedRoute>
                 }
                 />
-                        <Route
+            <Route
               path="/profile"
               element={
                 <ProtectedRoute>
-                  <PlaceholderPage title="Perfil — Módulo 8" />
+                  <ProfilePage />
                 </ProtectedRoute>
               }
             />
